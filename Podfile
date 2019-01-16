@@ -9,12 +9,12 @@ target 'MVVM_Structure' do
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
   pod 'Action'
-  pod 'ObjectMapper', '~> 3.4'
   pod 'Swinject'
   pod 'SwinjectStoryboard'
   pod 'RxAlamofire'
   pod 'Alamofire'
-  
+  pod 'RealmSwift'
+  pod 'SwiftyJSON', '~> 4.0'
   target 'MVVM_StructureTests' do
     inherit! :search_paths
     # Pods for testing

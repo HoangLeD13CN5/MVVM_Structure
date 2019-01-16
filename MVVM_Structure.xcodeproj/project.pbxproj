@@ -17,6 +17,20 @@
 		370AB22121ED97CF00435356 /* MVVM_StructureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370AB22021ED97CF00435356 /* MVVM_StructureUITests.swift */; };
 		370AB23521ED9D1A00435356 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370AB23421ED9D1A00435356 /* extensions.swift */; };
 		370AB23821ED9DA900435356 /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370AB23721ED9DA900435356 /* SwinjectStoryboard.swift */; };
+		37A1EF0E21EEC65000E517EB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF0821EEC65000E517EB /* APIService.swift */; };
+		37A1EF1121EEC65000E517EB /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF0B21EEC65000E517EB /* URLs.swift */; };
+		37A1EF1321EECC5300E517EB /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF1221EECC5300E517EB /* LoginEntity.swift */; };
+		37A1EF1521EED8F400E517EB /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF1421EED8F400E517EB /* LoginAPI.swift */; };
+		37A1EF1921EEDD0F00E517EB /* RealmDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF1821EEDD0F00E517EB /* RealmDao.swift */; };
+		37A1EF2021EEDF8E00E517EB /* AuthenticationRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF1F21EEDF8E00E517EB /* AuthenticationRepos.swift */; };
+		37A1EF2221EEDFC500E517EB /* AuthenticationReposImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2121EEDFC500E517EB /* AuthenticationReposImpl.swift */; };
+		37A1EF2421EEE3FE00E517EB /* ConvertAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2321EEE3FE00E517EB /* ConvertAuth.swift */; };
+		37A1EF2B21EEE5C100E517EB /* AutoSizeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2621EEE5C000E517EB /* AutoSizeLabel.swift */; };
+		37A1EF2C21EEE5C100E517EB /* AutoSizeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2721EEE5C000E517EB /* AutoSizeTextField.swift */; };
+		37A1EF2D21EEE5C100E517EB /* AutoSizeConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2821EEE5C100E517EB /* AutoSizeConstraint.swift */; };
+		37A1EF2E21EEE5C100E517EB /* AutoSizeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2921EEE5C100E517EB /* AutoSizeTextView.swift */; };
+		37A1EF2F21EEE5C100E517EB /* AutoSizeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2A21EEE5C100E517EB /* AutoSizeButton.swift */; };
+		37A1EF3121EEE66100E517EB /* AppInitializeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF3021EEE66100E517EB /* AppInitializeManager.swift */; };
 		E7FFEE173098C88070D48188 /* Pods_MVVM_StructureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3FE8FA576325A86B068C6 /* Pods_MVVM_StructureTests.framework */; };
 		E8FF33AE2D86180E1FAE3173 /* Pods_MVVM_Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3A1D32623A284390D1F9B3 /* Pods_MVVM_Structure.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +69,20 @@
 		370AB22221ED97CF00435356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		370AB23421ED9D1A00435356 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		370AB23721ED9DA900435356 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
+		37A1EF0821EEC65000E517EB /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		37A1EF0B21EEC65000E517EB /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		37A1EF1221EECC5300E517EB /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
+		37A1EF1421EED8F400E517EB /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		37A1EF1821EEDD0F00E517EB /* RealmDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDao.swift; sourceTree = "<group>"; };
+		37A1EF1F21EEDF8E00E517EB /* AuthenticationRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepos.swift; sourceTree = "<group>"; };
+		37A1EF2121EEDFC500E517EB /* AuthenticationReposImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationReposImpl.swift; sourceTree = "<group>"; };
+		37A1EF2321EEE3FE00E517EB /* ConvertAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertAuth.swift; sourceTree = "<group>"; };
+		37A1EF2621EEE5C000E517EB /* AutoSizeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeLabel.swift; sourceTree = "<group>"; };
+		37A1EF2721EEE5C000E517EB /* AutoSizeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeTextField.swift; sourceTree = "<group>"; };
+		37A1EF2821EEE5C100E517EB /* AutoSizeConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeConstraint.swift; sourceTree = "<group>"; };
+		37A1EF2921EEE5C100E517EB /* AutoSizeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeTextView.swift; sourceTree = "<group>"; };
+		37A1EF2A21EEE5C100E517EB /* AutoSizeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeButton.swift; sourceTree = "<group>"; };
+		37A1EF3021EEE66100E517EB /* AppInitializeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInitializeManager.swift; sourceTree = "<group>"; };
 		39113ECCA7AC5A67F20BA58E /* Pods-MVVM_StructureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_StructureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM_StructureTests/Pods-MVVM_StructureTests.release.xcconfig"; sourceTree = "<group>"; };
 		49EE3E8678949CDB22FC085B /* Pods-MVVM_Structure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_Structure.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM_Structure/Pods-MVVM_Structure.debug.xcconfig"; sourceTree = "<group>"; };
 		50B3FE8FA576325A86B068C6 /* Pods_MVVM_StructureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_StructureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +174,6 @@
 				370AB23021ED97F300435356 /* model */,
 				370AB22F21ED97EB00435356 /* data */,
 				370AB22E21ED97DF00435356 /* common */,
-				370AB20021ED97CC00435356 /* AppDelegate.swift */,
 				370AB20221ED97CC00435356 /* ViewController.swift */,
 				370AB20421ED97CC00435356 /* Main.storyboard */,
 				370AB20721ED97CE00435356 /* Assets.xcassets */,
@@ -177,8 +204,9 @@
 		370AB22E21ED97DF00435356 /* common */ = {
 			isa = PBXGroup;
 			children = (
-				370AB23721ED9DA900435356 /* SwinjectStoryboard.swift */,
-				370AB23421ED9D1A00435356 /* extensions.swift */,
+				37A1EF3321EEE6AB00E517EB /* utils */,
+				37A1EF3221EEE68300E517EB /* config */,
+				37A1EF2521EEE5AA00E517EB /* autoSizeWidget */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -187,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				370AB23F21ED9F2D00435356 /* ReposImpl */,
+				37A1EF1D21EEDEF100E517EB /* ConvertDataToModel */,
 				370AB23E21ED9EE400435356 /* Cache */,
 				370AB23D21ED9EDE00435356 /* Remote */,
 			);
@@ -235,6 +264,9 @@
 		370AB23D21ED9EDE00435356 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				37A1EF0521EEC60E00E517EB /* api */,
+				37A1EF0421EEC5E100E517EB /* entity */,
+				37A1EF0321EEC5D000E517EB /* BaseApi */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -242,6 +274,9 @@
 		370AB23E21ED9EE400435356 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
+				37A1EF1A21EEDD5500E517EB /* dao */,
+				37A1EF1621EEDA1200E517EB /* entity */,
+				37A1EF1721EEDA5300E517EB /* BaseRealm */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -249,6 +284,7 @@
 		370AB23F21ED9F2D00435356 /* ReposImpl */ = {
 			isa = PBXGroup;
 			children = (
+				37A1EF2121EEDFC500E517EB /* AuthenticationReposImpl.swift */,
 			);
 			path = ReposImpl;
 			sourceTree = "<group>";
@@ -256,6 +292,7 @@
 		370AB24021EDE8BD00435356 /* ReposProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				37A1EF1F21EEDF8E00E517EB /* AuthenticationRepos.swift */,
 			);
 			path = ReposProtocol;
 			sourceTree = "<group>";
@@ -265,6 +302,107 @@
 			children = (
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		37A1EF0321EEC5D000E517EB /* BaseApi */ = {
+			isa = PBXGroup;
+			children = (
+				37A1EF0821EEC65000E517EB /* APIService.swift */,
+				37A1EF0B21EEC65000E517EB /* URLs.swift */,
+			);
+			path = BaseApi;
+			sourceTree = "<group>";
+		};
+		37A1EF0421EEC5E100E517EB /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				37A1EF1C21EEDE2D00E517EB /* authentication */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		37A1EF0521EEC60E00E517EB /* api */ = {
+			isa = PBXGroup;
+			children = (
+				37A1EF1B21EEDE1700E517EB /* authentication */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		37A1EF1621EEDA1200E517EB /* entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		37A1EF1721EEDA5300E517EB /* BaseRealm */ = {
+			isa = PBXGroup;
+			children = (
+				37A1EF1821EEDD0F00E517EB /* RealmDao.swift */,
+			);
+			path = BaseRealm;
+			sourceTree = "<group>";
+		};
+		37A1EF1A21EEDD5500E517EB /* dao */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = dao;
+			sourceTree = "<group>";
+		};
+		37A1EF1B21EEDE1700E517EB /* authentication */ = {
+			isa = PBXGroup;
+			children = (
+				37A1EF1421EED8F400E517EB /* LoginAPI.swift */,
+			);
+			path = authentication;
+			sourceTree = "<group>";
+		};
+		37A1EF1C21EEDE2D00E517EB /* authentication */ = {
+			isa = PBXGroup;
+			children = (
+				37A1EF1221EECC5300E517EB /* LoginEntity.swift */,
+			);
+			path = authentication;
+			sourceTree = "<group>";
+		};
+		37A1EF1D21EEDEF100E517EB /* ConvertDataToModel */ = {
+			isa = PBXGroup;
+			children = (
+				37A1EF2321EEE3FE00E517EB /* ConvertAuth.swift */,
+			);
+			path = ConvertDataToModel;
+			sourceTree = "<group>";
+		};
+		37A1EF2521EEE5AA00E517EB /* autoSizeWidget */ = {
+			isa = PBXGroup;
+			children = (
+				37A1EF2A21EEE5C100E517EB /* AutoSizeButton.swift */,
+				37A1EF2821EEE5C100E517EB /* AutoSizeConstraint.swift */,
+				37A1EF2621EEE5C000E517EB /* AutoSizeLabel.swift */,
+				37A1EF2721EEE5C000E517EB /* AutoSizeTextField.swift */,
+				37A1EF2921EEE5C100E517EB /* AutoSizeTextView.swift */,
+			);
+			path = autoSizeWidget;
+			sourceTree = "<group>";
+		};
+		37A1EF3221EEE68300E517EB /* config */ = {
+			isa = PBXGroup;
+			children = (
+				370AB20021ED97CC00435356 /* AppDelegate.swift */,
+				370AB23721ED9DA900435356 /* SwinjectStoryboard.swift */,
+				37A1EF3021EEE66100E517EB /* AppInitializeManager.swift */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		37A1EF3321EEE6AB00E517EB /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				370AB23421ED9D1A00435356 /* extensions.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,11 +591,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MVVM_Structure/Pods-MVVM_Structure-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
@@ -467,11 +607,13 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
@@ -510,9 +652,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				370AB23521ED9D1A00435356 /* extensions.swift in Sources */,
+				37A1EF0E21EEC65000E517EB /* APIService.swift in Sources */,
 				370AB20321ED97CC00435356 /* ViewController.swift in Sources */,
 				370AB20121ED97CC00435356 /* AppDelegate.swift in Sources */,
+				37A1EF1521EED8F400E517EB /* LoginAPI.swift in Sources */,
+				37A1EF3121EEE66100E517EB /* AppInitializeManager.swift in Sources */,
+				37A1EF2E21EEE5C100E517EB /* AutoSizeTextView.swift in Sources */,
+				37A1EF2221EEDFC500E517EB /* AuthenticationReposImpl.swift in Sources */,
+				37A1EF1121EEC65000E517EB /* URLs.swift in Sources */,
+				37A1EF2C21EEE5C100E517EB /* AutoSizeTextField.swift in Sources */,
+				37A1EF2421EEE3FE00E517EB /* ConvertAuth.swift in Sources */,
+				37A1EF2B21EEE5C100E517EB /* AutoSizeLabel.swift in Sources */,
+				37A1EF2D21EEE5C100E517EB /* AutoSizeConstraint.swift in Sources */,
 				370AB23821ED9DA900435356 /* SwinjectStoryboard.swift in Sources */,
+				37A1EF2F21EEE5C100E517EB /* AutoSizeButton.swift in Sources */,
+				37A1EF1921EEDD0F00E517EB /* RealmDao.swift in Sources */,
+				37A1EF1321EECC5300E517EB /* LoginEntity.swift in Sources */,
+				37A1EF2021EEDF8E00E517EB /* AuthenticationRepos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
