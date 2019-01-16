@@ -9,7 +9,7 @@
 import RxSwift
 import RxCocoa
 import Action
-enum LoginErrorType {
+enum LoginErrorType:Int {
     case email
     case password
     case api
@@ -17,7 +17,7 @@ enum LoginErrorType {
 }
 class LoginViewModel {
     
-    let authRepos:AuthenticationRepos
+    let authRepos:AuthenticationRepos!
     let bag = DisposeBag()
     
     // MARK: - Input

@@ -12,8 +12,7 @@ import SwinjectStoryboard
 
 extension SwinjectStoryboard
 {
-    class func setup ()
-    {
-        
+    class func setup (){
+        defaultContainer.register(AuthenticationRepos.self, factory: { _ in return AuthenticationReposImpl() })
     }
 }

@@ -18,11 +18,13 @@ target 'MVVM_Structure' do
   target 'MVVM_StructureTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxTest',     '~> 4.0'
   end
 
   target 'MVVM_StructureUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxTest',     '~> 4.0'
   end
 
 end

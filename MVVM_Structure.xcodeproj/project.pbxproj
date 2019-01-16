@@ -33,6 +33,7 @@
 		37A1EF3121EEE66100E517EB /* AppInitializeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF3021EEE66100E517EB /* AppInitializeManager.swift */; };
 		37A1EF3721EF166C00E517EB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF3621EF166C00E517EB /* LoginViewModel.swift */; };
 		37A1EF3E21EF26CE00E517EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37A1EF3D21EF26CE00E517EB /* Localizable.strings */; };
+		37A1EF4021EF291400E517EB /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF3F21EF291400E517EB /* LoginViewModelTests.swift */; };
 		E7FFEE173098C88070D48188 /* Pods_MVVM_StructureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3FE8FA576325A86B068C6 /* Pods_MVVM_StructureTests.framework */; };
 		E8FF33AE2D86180E1FAE3173 /* Pods_MVVM_Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3A1D32623A284390D1F9B3 /* Pods_MVVM_Structure.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		37A1EF3021EEE66100E517EB /* AppInitializeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInitializeManager.swift; sourceTree = "<group>"; };
 		37A1EF3621EF166C00E517EB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		37A1EF3D21EF26CE00E517EB /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		37A1EF3F21EF291400E517EB /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		39113ECCA7AC5A67F20BA58E /* Pods-MVVM_StructureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_StructureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM_StructureTests/Pods-MVVM_StructureTests.release.xcconfig"; sourceTree = "<group>"; };
 		49EE3E8678949CDB22FC085B /* Pods-MVVM_Structure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_Structure.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM_Structure/Pods-MVVM_Structure.debug.xcconfig"; sourceTree = "<group>"; };
 		50B3FE8FA576325A86B068C6 /* Pods_MVVM_StructureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_StructureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				370AB21521ED97CF00435356 /* MVVM_StructureTests.swift */,
+				37A1EF3F21EF291400E517EB /* LoginViewModelTests.swift */,
 				370AB21721ED97CF00435356 /* Info.plist */,
 			);
 			path = MVVM_StructureTests;
@@ -441,6 +444,7 @@
 				370AB20D21ED97CE00435356 /* Sources */,
 				370AB20E21ED97CE00435356 /* Frameworks */,
 				370AB20F21ED97CE00435356 /* Resources */,
+				195EC526FFE24BF7285E087C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -460,6 +464,7 @@
 				370AB21821ED97CF00435356 /* Sources */,
 				370AB21921ED97CF00435356 /* Frameworks */,
 				370AB21A21ED97CF00435356 /* Resources */,
+				37EDC3A4B95192CD26240544 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -543,6 +548,58 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		195EC526FFE24BF7285E087C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MVVM_StructureTests/Pods-MVVM_StructureTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVVM_StructureTests/Pods-MVVM_StructureTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37EDC3A4B95192CD26240544 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MVVM_StructureUITests/Pods-MVVM_StructureUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVVM_StructureUITests/Pods-MVVM_StructureUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		760D39BC57D420705A3C04AA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -684,6 +741,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A1EF4021EF291400E517EB /* LoginViewModelTests.swift in Sources */,
 				370AB21621ED97CF00435356 /* MVVM_StructureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
