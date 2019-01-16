@@ -38,7 +38,6 @@ class LoginViewModel {
     
     func login() {
         loginAction = Action { [weak self] sender in
-            print(sender)
             self?.isLoadingData.value = true
             guard let this = self else { return Observable.never() }
             return this.authRepos
@@ -49,14 +48,14 @@ class LoginViewModel {
             .elements
             .subscribe(onNext: { [weak self] (token) in
                 self?.token.value = token
-                print(token)
+                self?.errorType.value = LoginErrorType.none
                 self?.isLoadingData.value = false
             })
             .disposed(by: bag)
         
         loginAction
             .errors
-            .subscribe(onError: { [weak self](error) in
+            .subscribe(onError: { [weak self] (error) in
                 self?.isLoadingData.value = false
                 self?.errorType.value = LoginErrorType.api
                 self?.errorMessage.value = (error as NSError).domain
@@ -66,7 +65,6 @@ class LoginViewModel {
     }
     
     func validateCredentials() -> Bool {
-        
         guard email.value.validateEmailPattern() else {
             errorType.value = LoginErrorType.email
             errorMessage.value = "EMAIL_VALIDATE".localized
@@ -78,7 +76,7 @@ class LoginViewModel {
             errorMessage.value = "PASSWORD_VALIDATE".localized
             return false
         }
-        
+        errorType.value = LoginErrorType.none
         errorMessage.value = ""
         return true
     }

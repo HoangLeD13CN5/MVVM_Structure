@@ -29,7 +29,7 @@ class LoginAPI: APIService<LoginEntity?> {
     }
     
     override func method() -> Alamofire.HTTPMethod {
-        return .get
+        return .post
     }
     
     override func encoding() -> ParameterEncoding {

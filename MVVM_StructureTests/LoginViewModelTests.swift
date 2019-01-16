@@ -31,21 +31,22 @@ class LoginViewModelTests: XCTestCase {
     }
     
     func testLogin() {
-        let asyncExpect = expectation(description: "fulfill test")
+//        let asyncExpect = expectation(description: "fulfill test")
         let viewModel = LoginViewModel(authRepos: AuthenticationReposImpl())
         XCTAssertEqual(viewModel.token.value, "")
-        viewModel.email.value = "lehoangd13cn5ptit"
+        viewModel.email.value = "lehoangd13cn5ptit@gmail.com.vn"
         viewModel.password.value = "H1234567"
         viewModel.login()
-        viewModel.loginAction
-            .execute("Test")
-            .subscribe(onNext: { _ in
-                asyncExpect.fulfill()
-            })
-            .disposed(by: bag)
+//        viewModel.loginAction
+//            .execute("Test")
+//            .debug()
+//            .subscribe(onNext: { _ in
+//                asyncExpect.fulfill()
+//            })
+//            .disposed(by: bag)
         waitForExpectations(timeout: 2.0, handler: { error in
-            XCTAssertNil(error, "error: \(error!.localizedDescription)")
-            XCTAssertNotEqual(viewModel.token.value, "")
+            XCTAssertEqual(viewModel.errorType.value.rawValue, LoginErrorType.api.rawValue)
+            XCTAssertEqual(viewModel.token.value, "")
         })
     }
     

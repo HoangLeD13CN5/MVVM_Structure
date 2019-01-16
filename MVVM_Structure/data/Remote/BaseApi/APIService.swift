@@ -22,7 +22,6 @@ class APIService<T> {
     
      func request() -> Observable<T> {
         let manager = Alamofire.SessionManager.default
-        
         return manager.rx
             .request(self.method(),
                      self.requestUrl(),
@@ -42,7 +41,7 @@ class APIService<T> {
         let error: Error
         switch response.result {
         case .success(let value):
-            if let statusCode = response.response?.statusCode , statusCode < 400 {
+            if let statusCode = response.response?.statusCode , statusCode < 300 {
                 return try! self.convertJson(JSON(data: response.data ?? Data()))
             } else {
                 error = self.createError(value)
