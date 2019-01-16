@@ -10,10 +10,10 @@ import Foundation
 import RxSwift
 
 class AuthenticationReposImpl: AuthenticationRepos{
-    func login(username: String, password: String) -> Observable<String?> {
+    func login(username: String, password: String) -> Observable<String> {
         return LoginAPI(username: username,password: password)
             .request()
             .observeOn(MainScheduler.instance)
-            .map { data in return data?.token }
+            .map { data in return data?.token ?? "" }
     }
 }

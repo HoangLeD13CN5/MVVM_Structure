@@ -9,6 +9,8 @@
 import Foundation
 import RxSwift
 
+
+
 protocol AuthenticationRepos {
-    func login(username:String,password:String) -> Observable<String?>
+    func login(username:String,password:String) -> Observable<String>
 }

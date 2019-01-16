@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Merchant
+
+  Created by HoangLM on 11/22/18.
+  Copyright © 2018 mobile. All rights reserved.
+*/
+
+//Verify phone number
+"EMAIL_VALIDATE" = "Email không hợp lệ !!";
+"PASSWORD_VALIDATE" = "Password không hợp lệ !!";
+

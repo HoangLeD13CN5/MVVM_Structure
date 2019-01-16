@@ -31,6 +31,8 @@
 		37A1EF2E21EEE5C100E517EB /* AutoSizeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2921EEE5C100E517EB /* AutoSizeTextView.swift */; };
 		37A1EF2F21EEE5C100E517EB /* AutoSizeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2A21EEE5C100E517EB /* AutoSizeButton.swift */; };
 		37A1EF3121EEE66100E517EB /* AppInitializeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF3021EEE66100E517EB /* AppInitializeManager.swift */; };
+		37A1EF3721EF166C00E517EB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF3621EF166C00E517EB /* LoginViewModel.swift */; };
+		37A1EF3E21EF26CE00E517EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37A1EF3D21EF26CE00E517EB /* Localizable.strings */; };
 		E7FFEE173098C88070D48188 /* Pods_MVVM_StructureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3FE8FA576325A86B068C6 /* Pods_MVVM_StructureTests.framework */; };
 		E8FF33AE2D86180E1FAE3173 /* Pods_MVVM_Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3A1D32623A284390D1F9B3 /* Pods_MVVM_Structure.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +85,8 @@
 		37A1EF2921EEE5C100E517EB /* AutoSizeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeTextView.swift; sourceTree = "<group>"; };
 		37A1EF2A21EEE5C100E517EB /* AutoSizeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeButton.swift; sourceTree = "<group>"; };
 		37A1EF3021EEE66100E517EB /* AppInitializeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInitializeManager.swift; sourceTree = "<group>"; };
+		37A1EF3621EF166C00E517EB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		37A1EF3D21EF26CE00E517EB /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		39113ECCA7AC5A67F20BA58E /* Pods-MVVM_StructureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_StructureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM_StructureTests/Pods-MVVM_StructureTests.release.xcconfig"; sourceTree = "<group>"; };
 		49EE3E8678949CDB22FC085B /* Pods-MVVM_Structure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_Structure.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM_Structure/Pods-MVVM_Structure.debug.xcconfig"; sourceTree = "<group>"; };
 		50B3FE8FA576325A86B068C6 /* Pods_MVVM_StructureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_StructureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,6 +247,7 @@
 		370AB23221ED980200435356 /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
+				37A1EF3621EF166C00E517EB /* LoginViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				370AB20021ED97CC00435356 /* AppDelegate.swift */,
 				370AB23721ED9DA900435356 /* SwinjectStoryboard.swift */,
 				37A1EF3021EEE66100E517EB /* AppInitializeManager.swift */,
+				37A1EF3D21EF26CE00E517EB /* Localizable.strings */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -514,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				370AB20B21ED97CE00435356 /* LaunchScreen.storyboard in Resources */,
+				37A1EF3E21EF26CE00E517EB /* Localizable.strings in Resources */,
 				370AB20821ED97CE00435356 /* Assets.xcassets in Resources */,
 				370AB20621ED97CC00435356 /* Main.storyboard in Resources */,
 			);
@@ -651,6 +658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A1EF3721EF166C00E517EB /* LoginViewModel.swift in Sources */,
 				370AB23521ED9D1A00435356 /* extensions.swift in Sources */,
 				37A1EF0E21EEC65000E517EB /* APIService.swift in Sources */,
 				370AB20321ED97CC00435356 /* ViewController.swift in Sources */,

@@ -18,17 +18,6 @@ class ApiResult{
     }
 }
 
-class ApiErrorResult:Error{
-    var message: String?
-    var message_code: String?
-    var message_params:String?
-    
-    init(_ val: Any) {
-        let json = JSON(val)
-        self.message = json["message_code"].string
-    }
-}
-
 class APIService<T> {
     
      func request() -> Observable<T> {
@@ -56,12 +45,19 @@ class APIService<T> {
             if let statusCode = response.response?.statusCode , statusCode < 400 {
                 return try! self.convertJson(JSON(data: response.data ?? Data()))
             } else {
-                error = ApiErrorResult(value)
+                error = self.createError(value)
             }
         case .failure(let e):
             error = e
         }
         throw error
+    }
+    
+    private func createError(_ val: Any) -> Error {
+        let json = JSON(val)
+        let message_code = json["message_code"].int ?? 0
+        let message = ""
+        return NSError(domain: message, code:message_code, userInfo:nil)
     }
     
     func convertJson(_ val: JSON?) throws -> T {
