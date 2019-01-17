@@ -30,6 +30,11 @@ class RealmDao<T: Object> {
         Realm.Configuration.defaultConfiguration = config
     }
     
+    func find(_ type: T.Type) throws -> T? {
+        let realm = try Realm()
+        return realm.objects(type).first
+    }
+    
     func findAll(_ type: T.Type) throws -> Results<T>? {
         let realm = try Realm()
         return realm.objects(type)
@@ -67,6 +72,47 @@ class RealmDao<T: Object> {
     func sorted(_ type: T.Type, byKeyPath keyPath: String, ascending: Bool) throws -> Results<T>? {
         let realm = try Realm()
         return realm.objects(type).sorted(byKeyPath: keyPath, ascending: ascending)
+    }
+    
+    func delete() throws {
+        let realm = try Realm()
+        let realmObj = realm.objects(T.self)
+        realm.delete(realmObj)
+    }
+    
+    /**
+     * @note: Delete all object, Only calling when logout
+     */
+    func deleteAll() throws {
+        let realm = try Realm()
+        realm.deleteAll()
+    }
+    
+    func delete(_ type: T.Type, id: Any) throws {
+        let realm = try Realm()
+        if let realmObj = try self.findById(type, id: id as! String) {
+             realm.delete(realmObj)
+        }
+    }
+    
+    func deleteObjects(_ type: T.Type, _ predicateFormat: String, _ args: Any...)throws
+    {
+        let realm = try Realm()
+        if let objects = try self.filter(type, predicateFormat, args)
+        {
+            try realm.write {
+                realm.delete(objects)
+            }
+        }
+    }
+    
+    func deleteObjects(_ type: T.Type, _ predicate: NSPredicate) throws
+    {
+        let realm = try Realm()
+        let objects = realm.objects(type).filter(predicate)
+        try realm.write {
+            realm.delete(objects)
+        }
     }
 }
 

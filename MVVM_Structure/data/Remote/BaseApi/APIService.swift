@@ -20,6 +20,9 @@ class ApiResult{
 
 class APIService<T> {
     
+    //Get token in Authentication
+    private let repos: AuthenticationReposImpl = AuthenticationReposImpl()
+    
      func request() -> Observable<T> {
         let manager = Alamofire.SessionManager.default
         return manager.rx
@@ -88,6 +91,12 @@ class APIService<T> {
     }
     
     func headers() -> Alamofire.HTTPHeaders {
+        if (!repos.getLocalOAuthToken().elementsEqual("")) {
+            return [
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + repos.getLocalOAuthToken()
+            ]
+        }
         return  ["Content-Type": "application/json"]
     }
 }
