@@ -41,6 +41,7 @@ class LoginViewModelTests: XCTestCase {
     }
     
     func testLoginFailer(){
+        
         let asyncExpect = expectation(description: "fulfill test")
         let viewModel = LoginViewModel(authRepos: AuthenticationReposImpl())
         XCTAssertEqual(viewModel.token.value, "")
@@ -48,12 +49,13 @@ class LoginViewModelTests: XCTestCase {
         viewModel.password.accept("H1234567")
         viewModel.login()
         viewModel.loginAction
-            .execute("Test")
+            .errors
             .subscribe(onNext: { _ in
                 asyncExpect.fulfill()
             })
             .disposed(by: bag)
-        waitForExpectations(timeout: 2.0, handler: nil )
+        viewModel.loginAction.execute("Test")
+        waitForExpectations(timeout: 2.0, handler: nil)
         XCTAssertEqual(viewModel.token.value, "")
     }
     
