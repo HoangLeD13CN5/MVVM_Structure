@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		14FD50D4667EE0B2C7DC0F92 /* Pods_MVVM_StructureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB870C24C35B7B6F59D0FF6A /* Pods_MVVM_StructureUITests.framework */; };
 		370AB20121ED97CC00435356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370AB20021ED97CC00435356 /* AppDelegate.swift */; };
-		370AB20321ED97CC00435356 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370AB20221ED97CC00435356 /* ViewController.swift */; };
+		370AB20321ED97CC00435356 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370AB20221ED97CC00435356 /* LoginVC.swift */; };
 		370AB20621ED97CC00435356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370AB20421ED97CC00435356 /* Main.storyboard */; };
 		370AB20821ED97CE00435356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370AB20721ED97CE00435356 /* Assets.xcassets */; };
 		370AB20B21ED97CE00435356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370AB20921ED97CE00435356 /* LaunchScreen.storyboard */; };
@@ -59,7 +59,7 @@
 		1B332764A4BEEF976162367D /* Pods-MVVM_Structure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_Structure.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM_Structure/Pods-MVVM_Structure.release.xcconfig"; sourceTree = "<group>"; };
 		370AB1FD21ED97CC00435356 /* MVVM_Structure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_Structure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370AB20021ED97CC00435356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		370AB20221ED97CC00435356 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		370AB20221ED97CC00435356 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		370AB20521ED97CC00435356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		370AB20721ED97CE00435356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		370AB20A21ED97CE00435356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -180,7 +180,6 @@
 				370AB23021ED97F300435356 /* model */,
 				370AB22F21ED97EB00435356 /* data */,
 				370AB22E21ED97DF00435356 /* common */,
-				370AB20221ED97CC00435356 /* ViewController.swift */,
 				370AB20421ED97CC00435356 /* Main.storyboard */,
 				370AB20721ED97CE00435356 /* Assets.xcassets */,
 				370AB20921ED97CE00435356 /* LaunchScreen.storyboard */,
@@ -258,6 +257,7 @@
 		370AB23B21ED9E4200435356 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				370AB20221ED97CC00435356 /* LoginVC.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -722,7 +722,7 @@
 				37A1EF3721EF166C00E517EB /* LoginViewModel.swift in Sources */,
 				370AB23521ED9D1A00435356 /* extensions.swift in Sources */,
 				37A1EF0E21EEC65000E517EB /* APIService.swift in Sources */,
-				370AB20321ED97CC00435356 /* ViewController.swift in Sources */,
+				370AB20321ED97CC00435356 /* LoginVC.swift in Sources */,
 				370AB20121ED97CC00435356 /* AppDelegate.swift in Sources */,
 				37A1EF1521EED8F400E517EB /* LoginAPI.swift in Sources */,
 				37A1EF3121EEE66100E517EB /* AppInitializeManager.swift in Sources */,

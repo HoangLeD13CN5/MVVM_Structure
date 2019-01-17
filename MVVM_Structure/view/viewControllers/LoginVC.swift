@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController {
+class LoginVC: UIViewController {
 
     @IBOutlet weak var error: UILabel!
     @IBOutlet weak var password: UITextField!
@@ -60,7 +60,10 @@ class ViewController: UIViewController {
                 let _ = self?.viewModel.validateCredentials()
             })
             .disposed(by: bag)
-        self.btnLogin.rx.tap.subscribe(onNext: {[weak self] _ in
+        self.btnLogin.rx.tap.do(onNext:  { [unowned self] in
+            self.username.resignFirstResponder()
+            self.password.resignFirstResponder()
+        }).subscribe(onNext: {[weak self] _ in
                 self?.viewModel.password.accept(self?.password.text ?? "")
                 if self?.viewModel.validateCredentials() ?? false {
                     self?.viewModel.login()
@@ -75,7 +78,11 @@ class ViewController: UIViewController {
             .bind(to: self.token.rx.text)
             .disposed(by: bag)
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.username.resignFirstResponder()
+        self.password.resignFirstResponder()
+    }
 
 }
 
