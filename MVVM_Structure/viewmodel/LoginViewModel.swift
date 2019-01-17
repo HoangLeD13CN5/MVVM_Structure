@@ -21,14 +21,14 @@ class LoginViewModel {
     let bag = DisposeBag()
     
     // MARK: - Input
-    private(set) var email: Variable<String> = Variable("")
-    private(set) var password: Variable<String> = Variable("")
+    private(set) var email: BehaviorRelay<String> =  BehaviorRelay<String>(value: "")
+    private(set) var password: BehaviorRelay<String> = BehaviorRelay<String>(value: "")
     
     // MARK: - Output
-    private(set) var token: Variable<String> = Variable("")
-    private(set) var errorMessage: Variable<String> = Variable("")
-    private(set) var errorType: Variable<LoginErrorType> = Variable(LoginErrorType.none)
-    private(set) var isLoadingData = Variable(false)
+    private(set) var token: BehaviorRelay<String> = BehaviorRelay<String>(value: "")
+    private(set) var errorMessage: BehaviorRelay<String> = BehaviorRelay<String>(value: "")
+    private(set) var errorType: BehaviorRelay<LoginErrorType> = BehaviorRelay<LoginErrorType>(value: LoginErrorType.none)
+    private(set) var isLoadingData = BehaviorRelay<Bool>(value: false)
     
     private(set) var loginAction: Action<String, String>!
     
@@ -38,7 +38,7 @@ class LoginViewModel {
     
     func login() {
         loginAction = Action { [weak self] sender in
-            self?.isLoadingData.value = true
+            self?.isLoadingData.accept(true)
             guard let this = self else { return Observable.never() }
             return this.authRepos
                 .login(username: this.email.value,password: this.password.value)
@@ -47,37 +47,41 @@ class LoginViewModel {
         loginAction
             .elements
             .subscribe(onNext: { [weak self] (token) in
-                self?.token.value = token
-                self?.errorType.value = LoginErrorType.none
-                self?.isLoadingData.value = false
+                self?.token.accept(token)
+                self?.errorType.accept(LoginErrorType.none)
+                self?.isLoadingData.accept(false)
             })
             .disposed(by: bag)
         
         loginAction
             .errors
-            .subscribe(onError: { [weak self] (error) in
-                self?.isLoadingData.value = false
-                self?.errorType.value = LoginErrorType.api
-                self?.errorMessage.value = (error as NSError).domain
-                print(error)
+            .subscribe(onNext: { [weak self] error in
+                switch error {
+                case .underlyingError(let apiError):
+                    self?.isLoadingData.accept(false)
+                    self?.errorType.accept(LoginErrorType.api)
+                    self?.errorMessage.accept((apiError as NSError).domain)
+                default:
+                    break
+                }
             })
             .disposed(by: bag)
     }
     
     func validateCredentials() -> Bool {
         guard email.value.validateEmailPattern() else {
-            errorType.value = LoginErrorType.email
-            errorMessage.value = "EMAIL_VALIDATE".localized
+            errorType.accept(LoginErrorType.email)
+            errorMessage.accept("EMAIL_VALIDATE".localized)
             return false
         }
         
         guard password.value.validateLength(size: (8,15)) else{
-            errorType.value = LoginErrorType.password
-            errorMessage.value = "PASSWORD_VALIDATE".localized
+            errorType.accept(LoginErrorType.password)
+            errorMessage.accept("PASSWORD_VALIDATE".localized)
             return false
         }
-        errorType.value = LoginErrorType.none
-        errorMessage.value = ""
+        errorType.accept(LoginErrorType.none)
+        errorMessage.accept("")
         return true
     }
 }

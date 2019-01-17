@@ -54,7 +54,7 @@ class APIService<T> {
     
     private func createError(_ val: Any) -> Error {
         let json = JSON(val)
-        let message_code = json["message_code"].int ?? 0
+        let message_code = json["message_code"].intValue
         let message = ""
         return NSError(domain: message, code:message_code, userInfo:nil)
     }
