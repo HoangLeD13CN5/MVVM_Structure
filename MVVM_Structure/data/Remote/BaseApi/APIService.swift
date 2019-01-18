@@ -19,7 +19,6 @@ class ApiResult{
 }
 
 class APIService<T> {
-    
      func request() -> Observable<T> {
         let manager = Alamofire.SessionManager.default
         return manager.rx

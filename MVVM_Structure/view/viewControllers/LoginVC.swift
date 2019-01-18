@@ -65,7 +65,6 @@ class LoginVC: UIViewController {
         }).subscribe(onNext: {[weak self] _ in
                 self?.loginViewModel.password.accept(self?.password.text ?? "")
                 if self?.loginViewModel.validateCredentials() ?? false {
-                    self?.loginViewModel.login()
                     self?.loginViewModel
                          .loginAction
                          .execute("Test")
@@ -82,6 +81,5 @@ class LoginVC: UIViewController {
         self.username.resignFirstResponder()
         self.password.resignFirstResponder()
     }
-
 }
 

@@ -26,6 +26,7 @@
 		372A2ADC21F18C5D006205F7 /* CoworkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2ADB21F18C5D006205F7 /* CoworkingModel.swift */; };
 		372A2ADE21F18CF0006205F7 /* ConvertCoworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2ADD21F18CF0006205F7 /* ConvertCoworkingManager.swift */; };
 		372A2AE021F1912F006205F7 /* ListCoworkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2ADF21F1912F006205F7 /* ListCoworkingViewModel.swift */; };
+		372A2AE221F1A817006205F7 /* ListCoworkingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2AE121F1A817006205F7 /* ListCoworkingViewModelTests.swift */; };
 		372F6BD721F16CBE00507783 /* UserDefaultsApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F6BD621F16CBE00507783 /* UserDefaultsApiManager.swift */; };
 		37A1EF0E21EEC65000E517EB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF0821EEC65000E517EB /* APIService.swift */; };
 		37A1EF1121EEC65000E517EB /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF0B21EEC65000E517EB /* URLs.swift */; };
@@ -90,6 +91,7 @@
 		372A2ADB21F18C5D006205F7 /* CoworkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingModel.swift; sourceTree = "<group>"; };
 		372A2ADD21F18CF0006205F7 /* ConvertCoworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCoworkingManager.swift; sourceTree = "<group>"; };
 		372A2ADF21F1912F006205F7 /* ListCoworkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoworkingViewModel.swift; sourceTree = "<group>"; };
+		372A2AE121F1A817006205F7 /* ListCoworkingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoworkingViewModelTests.swift; sourceTree = "<group>"; };
 		372F6BD621F16CBE00507783 /* UserDefaultsApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsApiManager.swift; sourceTree = "<group>"; };
 		37A1EF0821EEC65000E517EB /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		37A1EF0B21EEC65000E517EB /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				370AB21521ED97CF00435356 /* MVVM_StructureTests.swift */,
 				37A1EF3F21EF291400E517EB /* LoginViewModelTests.swift */,
 				370AB21721ED97CF00435356 /* Info.plist */,
+				372A2AE121F1A817006205F7 /* ListCoworkingViewModelTests.swift */,
 			);
 			path = MVVM_StructureTests;
 			sourceTree = "<group>";
@@ -798,6 +801,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37A1EF4021EF291400E517EB /* LoginViewModelTests.swift in Sources */,
+				372A2AE221F1A817006205F7 /* ListCoworkingViewModelTests.swift in Sources */,
 				370AB21621ED97CF00435356 /* MVVM_StructureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -37,12 +37,8 @@ class ListCoworkingSpaceAPI: APIService<[CoworkingApiEntity?]> {
         return .get
     }
     
-    override func encoding() -> ParameterEncoding {
-        return JSONEncoding.default
-    }
-    
     override func params() -> Parameters {
-        return ["limit" : self.limit, "offset" : self.offset]
+        return ["limit" : String(self.limit), "offset" : String(self.offset)]
     }
 }
 

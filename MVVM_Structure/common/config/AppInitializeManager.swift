@@ -21,7 +21,6 @@ class AppInitializeManager {
     
     func prepare(_ application: UIApplication, callback:@escaping () -> Void) {
             initRealm()
-            .debug("AppInitializeManager", trimOutput: false)
             .subscribe(
                 onSuccess: {[weak self] _ in
                     self?.initialized = true

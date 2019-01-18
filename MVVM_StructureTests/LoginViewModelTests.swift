@@ -29,7 +29,6 @@ class LoginViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.token.value, "")
         viewModel.email.accept("lehoangd13cn5ptit")
         viewModel.password.accept("H1234567")
-        viewModel.login()
         viewModel.loginAction
             .execute("Test")
             .subscribe(onNext: { _ in
@@ -47,7 +46,6 @@ class LoginViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.token.value, "")
         viewModel.email.accept("lehoangd13cn5ptit.gmail.com.vn")
         viewModel.password.accept("H1234567")
-        viewModel.login()
         viewModel.loginAction
             .errors
             .subscribe(onNext: { _ in

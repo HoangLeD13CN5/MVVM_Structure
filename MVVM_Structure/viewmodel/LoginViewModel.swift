@@ -35,6 +35,7 @@ class LoginViewModel {
     
     init(authRepos: AuthenticationRepos) {
         self.authRepos = authRepos
+        self.login()
     }
     
     func login() {
