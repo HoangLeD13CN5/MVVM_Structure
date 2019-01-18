@@ -10,4 +10,6 @@ struct URLs {
     static let BASE_API = "https://develop.api.spaceshare.vn/"
     //MARK: authentication
     static let LOGIN = "authentication/v1/login/"
+    //MARK: coworking-space
+    static let LIST_COWORKING = "coworking-space/v1/"
 }

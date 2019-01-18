@@ -17,8 +17,16 @@
 		370AB22121ED97CF00435356 /* MVVM_StructureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370AB22021ED97CF00435356 /* MVVM_StructureUITests.swift */; };
 		370AB23521ED9D1A00435356 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370AB23421ED9D1A00435356 /* extensions.swift */; };
 		370AB23821ED9DA900435356 /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370AB23721ED9DA900435356 /* SwinjectStoryboard.swift */; };
-		372E47F621F08A7C00112B8A /* RlmLoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E47F521F08A7C00112B8A /* RlmLoginEntity.swift */; };
-		372E47F821F08B3400112B8A /* LoginDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372E47F721F08B3400112B8A /* LoginDao.swift */; };
+		372A2ACD21F18390006205F7 /* OrganizationAPIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2ACC21F18390006205F7 /* OrganizationAPIEntity.swift */; };
+		372A2ACF21F18460006205F7 /* CoworkingApiEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2ACE21F18460006205F7 /* CoworkingApiEntity.swift */; };
+		372A2AD421F1886D006205F7 /* ListCoworkingSpaceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2AD321F1886D006205F7 /* ListCoworkingSpaceAPI.swift */; };
+		372A2AD621F18A8C006205F7 /* CoworkingSpaceRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2AD521F18A8C006205F7 /* CoworkingSpaceRepos.swift */; };
+		372A2AD821F18AF5006205F7 /* CoworkingSpaceReposImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2AD721F18AF5006205F7 /* CoworkingSpaceReposImpl.swift */; };
+		372A2ADA21F18BF7006205F7 /* OrganizationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2AD921F18BF7006205F7 /* OrganizationModel.swift */; };
+		372A2ADC21F18C5D006205F7 /* CoworkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2ADB21F18C5D006205F7 /* CoworkingModel.swift */; };
+		372A2ADE21F18CF0006205F7 /* ConvertCoworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2ADD21F18CF0006205F7 /* ConvertCoworkingManager.swift */; };
+		372A2AE021F1912F006205F7 /* ListCoworkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2ADF21F1912F006205F7 /* ListCoworkingViewModel.swift */; };
+		372F6BD721F16CBE00507783 /* UserDefaultsApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F6BD621F16CBE00507783 /* UserDefaultsApiManager.swift */; };
 		37A1EF0E21EEC65000E517EB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF0821EEC65000E517EB /* APIService.swift */; };
 		37A1EF1121EEC65000E517EB /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF0B21EEC65000E517EB /* URLs.swift */; };
 		37A1EF1321EECC5300E517EB /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF1221EECC5300E517EB /* LoginEntity.swift */; };
@@ -26,7 +34,6 @@
 		37A1EF1921EEDD0F00E517EB /* RealmDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF1821EEDD0F00E517EB /* RealmDao.swift */; };
 		37A1EF2021EEDF8E00E517EB /* AuthenticationRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF1F21EEDF8E00E517EB /* AuthenticationRepos.swift */; };
 		37A1EF2221EEDFC500E517EB /* AuthenticationReposImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2121EEDFC500E517EB /* AuthenticationReposImpl.swift */; };
-		37A1EF2421EEE3FE00E517EB /* ConvertAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2321EEE3FE00E517EB /* ConvertAuth.swift */; };
 		37A1EF2B21EEE5C100E517EB /* AutoSizeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2621EEE5C000E517EB /* AutoSizeLabel.swift */; };
 		37A1EF2C21EEE5C100E517EB /* AutoSizeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2721EEE5C000E517EB /* AutoSizeTextField.swift */; };
 		37A1EF2D21EEE5C100E517EB /* AutoSizeConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2821EEE5C100E517EB /* AutoSizeConstraint.swift */; };
@@ -74,8 +81,16 @@
 		370AB22221ED97CF00435356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		370AB23421ED9D1A00435356 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		370AB23721ED9DA900435356 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
-		372E47F521F08A7C00112B8A /* RlmLoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RlmLoginEntity.swift; sourceTree = "<group>"; };
-		372E47F721F08B3400112B8A /* LoginDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDao.swift; sourceTree = "<group>"; };
+		372A2ACC21F18390006205F7 /* OrganizationAPIEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationAPIEntity.swift; sourceTree = "<group>"; };
+		372A2ACE21F18460006205F7 /* CoworkingApiEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingApiEntity.swift; sourceTree = "<group>"; };
+		372A2AD321F1886D006205F7 /* ListCoworkingSpaceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoworkingSpaceAPI.swift; sourceTree = "<group>"; };
+		372A2AD521F18A8C006205F7 /* CoworkingSpaceRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingSpaceRepos.swift; sourceTree = "<group>"; };
+		372A2AD721F18AF5006205F7 /* CoworkingSpaceReposImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingSpaceReposImpl.swift; sourceTree = "<group>"; };
+		372A2AD921F18BF7006205F7 /* OrganizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationModel.swift; sourceTree = "<group>"; };
+		372A2ADB21F18C5D006205F7 /* CoworkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingModel.swift; sourceTree = "<group>"; };
+		372A2ADD21F18CF0006205F7 /* ConvertCoworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCoworkingManager.swift; sourceTree = "<group>"; };
+		372A2ADF21F1912F006205F7 /* ListCoworkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoworkingViewModel.swift; sourceTree = "<group>"; };
+		372F6BD621F16CBE00507783 /* UserDefaultsApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsApiManager.swift; sourceTree = "<group>"; };
 		37A1EF0821EEC65000E517EB /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		37A1EF0B21EEC65000E517EB /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		37A1EF1221EECC5300E517EB /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
@@ -83,7 +98,6 @@
 		37A1EF1821EEDD0F00E517EB /* RealmDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDao.swift; sourceTree = "<group>"; };
 		37A1EF1F21EEDF8E00E517EB /* AuthenticationRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepos.swift; sourceTree = "<group>"; };
 		37A1EF2121EEDFC500E517EB /* AuthenticationReposImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationReposImpl.swift; sourceTree = "<group>"; };
-		37A1EF2321EEE3FE00E517EB /* ConvertAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertAuth.swift; sourceTree = "<group>"; };
 		37A1EF2621EEE5C000E517EB /* AutoSizeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeLabel.swift; sourceTree = "<group>"; };
 		37A1EF2721EEE5C000E517EB /* AutoSizeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeTextField.swift; sourceTree = "<group>"; };
 		37A1EF2821EEE5C100E517EB /* AutoSizeConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeConstraint.swift; sourceTree = "<group>"; };
@@ -254,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				37A1EF3621EF166C00E517EB /* LoginViewModel.swift */,
+				372A2ADF21F1912F006205F7 /* ListCoworkingViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -297,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				37A1EF2121EEDFC500E517EB /* AuthenticationReposImpl.swift */,
+				372A2AD721F18AF5006205F7 /* CoworkingSpaceReposImpl.swift */,
 			);
 			path = ReposImpl;
 			sourceTree = "<group>";
@@ -305,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				37A1EF1F21EEDF8E00E517EB /* AuthenticationRepos.swift */,
+				372A2AD521F18A8C006205F7 /* CoworkingSpaceRepos.swift */,
 			);
 			path = ReposProtocol;
 			sourceTree = "<group>";
@@ -312,13 +329,33 @@
 		370AB24221EDEB3A00435356 /* entity */ = {
 			isa = PBXGroup;
 			children = (
+				372A2AD921F18BF7006205F7 /* OrganizationModel.swift */,
+				372A2ADB21F18C5D006205F7 /* CoworkingModel.swift */,
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		372A2ACB21F17D76006205F7 /* coworking-space */ = {
+			isa = PBXGroup;
+			children = (
+				372A2ACC21F18390006205F7 /* OrganizationAPIEntity.swift */,
+				372A2ACE21F18460006205F7 /* CoworkingApiEntity.swift */,
+			);
+			path = "coworking-space";
+			sourceTree = "<group>";
+		};
+		372A2AD221F18856006205F7 /* coworking-space */ = {
+			isa = PBXGroup;
+			children = (
+				372A2AD321F1886D006205F7 /* ListCoworkingSpaceAPI.swift */,
+			);
+			path = "coworking-space";
 			sourceTree = "<group>";
 		};
 		37A1EF0321EEC5D000E517EB /* BaseApi */ = {
 			isa = PBXGroup;
 			children = (
+				372F6BD621F16CBE00507783 /* UserDefaultsApiManager.swift */,
 				37A1EF0821EEC65000E517EB /* APIService.swift */,
 				37A1EF0B21EEC65000E517EB /* URLs.swift */,
 			);
@@ -328,6 +365,7 @@
 		37A1EF0421EEC5E100E517EB /* entity */ = {
 			isa = PBXGroup;
 			children = (
+				372A2ACB21F17D76006205F7 /* coworking-space */,
 				37A1EF1C21EEDE2D00E517EB /* authentication */,
 			);
 			path = entity;
@@ -336,6 +374,7 @@
 		37A1EF0521EEC60E00E517EB /* api */ = {
 			isa = PBXGroup;
 			children = (
+				372A2AD221F18856006205F7 /* coworking-space */,
 				37A1EF1B21EEDE1700E517EB /* authentication */,
 			);
 			path = api;
@@ -344,7 +383,6 @@
 		37A1EF1621EEDA1200E517EB /* entity */ = {
 			isa = PBXGroup;
 			children = (
-				372E47F521F08A7C00112B8A /* RlmLoginEntity.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -360,7 +398,6 @@
 		37A1EF1A21EEDD5500E517EB /* dao */ = {
 			isa = PBXGroup;
 			children = (
-				372E47F721F08B3400112B8A /* LoginDao.swift */,
 			);
 			path = dao;
 			sourceTree = "<group>";
@@ -384,7 +421,7 @@
 		37A1EF1D21EEDEF100E517EB /* ConvertDataToModel */ = {
 			isa = PBXGroup;
 			children = (
-				37A1EF2321EEE3FE00E517EB /* ConvertAuth.swift */,
+				372A2ADD21F18CF0006205F7 /* ConvertCoworkingManager.swift */,
 			);
 			path = ConvertDataToModel;
 			sourceTree = "<group>";
@@ -725,27 +762,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372A2AD821F18AF5006205F7 /* CoworkingSpaceReposImpl.swift in Sources */,
 				37A1EF3721EF166C00E517EB /* LoginViewModel.swift in Sources */,
+				372A2ACF21F18460006205F7 /* CoworkingApiEntity.swift in Sources */,
 				370AB23521ED9D1A00435356 /* extensions.swift in Sources */,
 				37A1EF0E21EEC65000E517EB /* APIService.swift in Sources */,
 				370AB20321ED97CC00435356 /* LoginVC.swift in Sources */,
 				370AB20121ED97CC00435356 /* AppDelegate.swift in Sources */,
 				37A1EF1521EED8F400E517EB /* LoginAPI.swift in Sources */,
+				372F6BD721F16CBE00507783 /* UserDefaultsApiManager.swift in Sources */,
 				37A1EF3121EEE66100E517EB /* AppInitializeManager.swift in Sources */,
 				37A1EF2E21EEE5C100E517EB /* AutoSizeTextView.swift in Sources */,
 				37A1EF2221EEDFC500E517EB /* AuthenticationReposImpl.swift in Sources */,
 				37A1EF1121EEC65000E517EB /* URLs.swift in Sources */,
 				37A1EF2C21EEE5C100E517EB /* AutoSizeTextField.swift in Sources */,
-				37A1EF2421EEE3FE00E517EB /* ConvertAuth.swift in Sources */,
-				372E47F821F08B3400112B8A /* LoginDao.swift in Sources */,
-				372E47F621F08A7C00112B8A /* RlmLoginEntity.swift in Sources */,
 				37A1EF2B21EEE5C100E517EB /* AutoSizeLabel.swift in Sources */,
+				372A2AE021F1912F006205F7 /* ListCoworkingViewModel.swift in Sources */,
+				372A2ADC21F18C5D006205F7 /* CoworkingModel.swift in Sources */,
+				372A2ADA21F18BF7006205F7 /* OrganizationModel.swift in Sources */,
 				37A1EF2D21EEE5C100E517EB /* AutoSizeConstraint.swift in Sources */,
 				370AB23821ED9DA900435356 /* SwinjectStoryboard.swift in Sources */,
 				37A1EF2F21EEE5C100E517EB /* AutoSizeButton.swift in Sources */,
+				372A2ADE21F18CF0006205F7 /* ConvertCoworkingManager.swift in Sources */,
 				37A1EF1921EEDD0F00E517EB /* RealmDao.swift in Sources */,
+				372A2AD421F1886D006205F7 /* ListCoworkingSpaceAPI.swift in Sources */,
+				372A2AD621F18A8C006205F7 /* CoworkingSpaceRepos.swift in Sources */,
 				37A1EF1321EECC5300E517EB /* LoginEntity.swift in Sources */,
 				37A1EF2021EEDF8E00E517EB /* AuthenticationRepos.swift in Sources */,
+				372A2ACD21F18390006205F7 /* OrganizationAPIEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,7 +896,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -907,7 +951,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -925,6 +969,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BSB6CRGJN8;
 				INFOPLIST_FILE = MVVM_Structure/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -944,6 +989,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BSB6CRGJN8;
 				INFOPLIST_FILE = MVVM_Structure/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,6 +9,7 @@
 import RxSwift
 import RxCocoa
 import Action
+
 enum LoginErrorType:Int {
     case email
     case password

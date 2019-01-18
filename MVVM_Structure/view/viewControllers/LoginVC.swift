@@ -21,17 +21,16 @@ class LoginVC: UIViewController {
     @IBOutlet weak var token: UILabel!
     @IBOutlet weak var loading: UILabel!
     
-    fileprivate var viewModel: LoginViewModel = LoginViewModel(authRepos: AuthenticationReposImpl())
+    var loginViewModel: LoginViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         bindUI()
-        
     }
     
     private func bindUI() {
-        viewModel.isLoadingData
+        loginViewModel.isLoadingData
             .asObservable()
             .map{ isLoading in
                 if isLoading {
@@ -42,38 +41,38 @@ class LoginVC: UIViewController {
             }
             .bind(to: self.loading.rx.text)
             .disposed(by: bag)
-        viewModel.errorMessage
+        loginViewModel.errorMessage
             .asObservable()
             .bind(to: self.error.rx.text)
             .disposed(by: bag)
         username.rx.controlEvent([.editingDidEnd])
             .asObservable()
             .subscribe(onNext: {[weak self] _ in
-                self?.viewModel.email.accept(self?.username.text ?? "")
-                let _ = self?.viewModel.validateCredentials()
+                self?.loginViewModel.email.accept(self?.username.text ?? "")
+                let _ = self?.loginViewModel.validateCredentials()
             })
             .disposed(by: bag)
         password.rx.controlEvent([.editingDidBegin, .editingDidEnd])
             .asObservable()
             .subscribe(onNext: {[weak self] _ in
-                self?.viewModel.password.accept(self?.password.text ?? "")
-                let _ = self?.viewModel.validateCredentials()
+                self?.loginViewModel.password.accept(self?.password.text ?? "")
+                let _ = self?.loginViewModel.validateCredentials()
             })
             .disposed(by: bag)
         self.btnLogin.rx.tap.do(onNext:  { [unowned self] in
             self.username.resignFirstResponder()
             self.password.resignFirstResponder()
         }).subscribe(onNext: {[weak self] _ in
-                self?.viewModel.password.accept(self?.password.text ?? "")
-                if self?.viewModel.validateCredentials() ?? false {
-                    self?.viewModel.login()
-                    self?.viewModel
+                self?.loginViewModel.password.accept(self?.password.text ?? "")
+                if self?.loginViewModel.validateCredentials() ?? false {
+                    self?.loginViewModel.login()
+                    self?.loginViewModel
                          .loginAction
                          .execute("Test")
                 }
             })
             .disposed(by: bag)
-        viewModel.token
+        loginViewModel.token
             .asObservable()
             .bind(to: self.token.rx.text)
             .disposed(by: bag)
