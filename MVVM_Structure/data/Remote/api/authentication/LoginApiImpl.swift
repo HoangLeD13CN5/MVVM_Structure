@@ -9,12 +9,20 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import RxSwift
 
-class LoginAPI: APIService<LoginEntity?> {
+class LoginApiImpl: APIService<LoginEntity?>, LoginApi{
+   
     var username: String = ""
     var password:String = ""
     
-    init(username:String,password:String) {
+    func requestApi() -> Observable<String> {
+        return request().flatMap { data in
+            return self.setLocalOAuthToken(oauthToken: data?.token)
+        }
+    }
+    
+    func setParamater(username: String, password: String) {
         self.username = username
         self.password = password
     }
@@ -38,6 +46,15 @@ class LoginAPI: APIService<LoginEntity?> {
     
     override func params() -> Parameters {
         return ["username" : self.username, "password" : self.password]
+    }
+    
+    private func setLocalOAuthToken(oauthToken: String?) -> Observable<String> {
+        return Observable<String>.create { observer in
+            UserDefaultsApiManager.shared.saveToken(token: oauthToken ?? "")
+            observer.onNext(oauthToken ?? "")
+            observer.onCompleted()
+            return Disposables.create {}
+        }
     }
 }
 

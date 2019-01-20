@@ -19,13 +19,13 @@ class LoginViewModelTests: XCTestCase {
     let bag = DisposeBag()
     
     func test_whenInitialized_storesInitParams() {
-        let viewModel = LoginViewModel(authRepos: AuthenticationReposImpl())
+        let viewModel = LoginViewModel(authRepos: AuthenticationReposImpl(loginApi: LoginApiImpl()))
         XCTAssertNotNil(viewModel.authRepos)
     }
     
     func testLoginSuccess() {
         let asyncExpect = expectation(description: "fulfill test")
-        let viewModel = LoginViewModel(authRepos: AuthenticationReposImpl())
+       let viewModel = LoginViewModel(authRepos: AuthenticationReposImpl(loginApi: LoginApiImpl()))
         XCTAssertEqual(viewModel.token.value, "")
         viewModel.email.accept("lehoangd13cn5ptit")
         viewModel.password.accept("H1234567")
@@ -42,7 +42,7 @@ class LoginViewModelTests: XCTestCase {
     func testLoginFailer(){
         
         let asyncExpect = expectation(description: "fulfill test")
-        let viewModel = LoginViewModel(authRepos: AuthenticationReposImpl())
+        let viewModel = LoginViewModel(authRepos: AuthenticationReposImpl(loginApi: LoginApiImpl()))
         XCTAssertEqual(viewModel.token.value, "")
         viewModel.email.accept("lehoangd13cn5ptit.gmail.com.vn")
         viewModel.password.accept("H1234567")
@@ -58,7 +58,7 @@ class LoginViewModelTests: XCTestCase {
     }
     
     func testPasswordValidate() {
-        let viewModel = LoginViewModel(authRepos: AuthenticationReposImpl())
+        let viewModel = LoginViewModel(authRepos: AuthenticationReposImpl(loginApi: LoginApiImpl()))
         XCTAssertEqual(viewModel.token.value, "")
         viewModel.email.accept("lehoangd13cn5ptit@gmail.com")
         viewModel.password.accept("H1234")
@@ -68,7 +68,7 @@ class LoginViewModelTests: XCTestCase {
     }
     
     func testEmailValidate() {
-        let viewModel = LoginViewModel(authRepos: AuthenticationReposImpl())
+        let viewModel = LoginViewModel(authRepos: AuthenticationReposImpl(loginApi: LoginApiImpl()))
         XCTAssertEqual(viewModel.token.value, "")
         viewModel.email.accept("lehoangd13cn5ptit")
         viewModel.password.accept("H12345678")

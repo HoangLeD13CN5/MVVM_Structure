@@ -19,7 +19,7 @@
 		370AB23821ED9DA900435356 /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370AB23721ED9DA900435356 /* SwinjectStoryboard.swift */; };
 		372A2ACD21F18390006205F7 /* OrganizationAPIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2ACC21F18390006205F7 /* OrganizationAPIEntity.swift */; };
 		372A2ACF21F18460006205F7 /* CoworkingApiEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2ACE21F18460006205F7 /* CoworkingApiEntity.swift */; };
-		372A2AD421F1886D006205F7 /* ListCoworkingSpaceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2AD321F1886D006205F7 /* ListCoworkingSpaceAPI.swift */; };
+		372A2AD421F1886D006205F7 /* ListCoworkingSpaceApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2AD321F1886D006205F7 /* ListCoworkingSpaceApiImpl.swift */; };
 		372A2AD621F18A8C006205F7 /* CoworkingSpaceRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2AD521F18A8C006205F7 /* CoworkingSpaceRepos.swift */; };
 		372A2AD821F18AF5006205F7 /* CoworkingSpaceReposImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2AD721F18AF5006205F7 /* CoworkingSpaceReposImpl.swift */; };
 		372A2ADA21F18BF7006205F7 /* OrganizationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2AD921F18BF7006205F7 /* OrganizationModel.swift */; };
@@ -30,10 +30,14 @@
 		372A2AE721F1BF9E006205F7 /* CoworkingRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2AE621F1BF9E006205F7 /* CoworkingRealmEntity.swift */; };
 		372A2AE921F1C920006205F7 /* CoworkingSpaceDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2AE821F1C920006205F7 /* CoworkingSpaceDao.swift */; };
 		372F6BD721F16CBE00507783 /* UserDefaultsApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F6BD621F16CBE00507783 /* UserDefaultsApiManager.swift */; };
+		374649BA21F4C9DD002ABD1A /* ApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374649B921F4C9DD002ABD1A /* ApiProtocol.swift */; };
+		374649BC21F4CCEC002ABD1A /* ConvertCoworkingApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374649BB21F4CCEC002ABD1A /* ConvertCoworkingApiManager.swift */; };
+		374649BE21F4D0BA002ABD1A /* CacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374649BD21F4D0BA002ABD1A /* CacheProtocol.swift */; };
+		374649C021F4D150002ABD1A /* ConvertCoworkingCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374649BF21F4D150002ABD1A /* ConvertCoworkingCacheManager.swift */; };
 		37A1EF0E21EEC65000E517EB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF0821EEC65000E517EB /* APIService.swift */; };
 		37A1EF1121EEC65000E517EB /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF0B21EEC65000E517EB /* URLs.swift */; };
 		37A1EF1321EECC5300E517EB /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF1221EECC5300E517EB /* LoginEntity.swift */; };
-		37A1EF1521EED8F400E517EB /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF1421EED8F400E517EB /* LoginAPI.swift */; };
+		37A1EF1521EED8F400E517EB /* LoginApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF1421EED8F400E517EB /* LoginApiImpl.swift */; };
 		37A1EF1921EEDD0F00E517EB /* RealmDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF1821EEDD0F00E517EB /* RealmDao.swift */; };
 		37A1EF2021EEDF8E00E517EB /* AuthenticationRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF1F21EEDF8E00E517EB /* AuthenticationRepos.swift */; };
 		37A1EF2221EEDFC500E517EB /* AuthenticationReposImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1EF2121EEDFC500E517EB /* AuthenticationReposImpl.swift */; };
@@ -86,7 +90,7 @@
 		370AB23721ED9DA900435356 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		372A2ACC21F18390006205F7 /* OrganizationAPIEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationAPIEntity.swift; sourceTree = "<group>"; };
 		372A2ACE21F18460006205F7 /* CoworkingApiEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingApiEntity.swift; sourceTree = "<group>"; };
-		372A2AD321F1886D006205F7 /* ListCoworkingSpaceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoworkingSpaceAPI.swift; sourceTree = "<group>"; };
+		372A2AD321F1886D006205F7 /* ListCoworkingSpaceApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoworkingSpaceApiImpl.swift; sourceTree = "<group>"; };
 		372A2AD521F18A8C006205F7 /* CoworkingSpaceRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingSpaceRepos.swift; sourceTree = "<group>"; };
 		372A2AD721F18AF5006205F7 /* CoworkingSpaceReposImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingSpaceReposImpl.swift; sourceTree = "<group>"; };
 		372A2AD921F18BF7006205F7 /* OrganizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationModel.swift; sourceTree = "<group>"; };
@@ -97,10 +101,14 @@
 		372A2AE621F1BF9E006205F7 /* CoworkingRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingRealmEntity.swift; sourceTree = "<group>"; };
 		372A2AE821F1C920006205F7 /* CoworkingSpaceDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingSpaceDao.swift; sourceTree = "<group>"; };
 		372F6BD621F16CBE00507783 /* UserDefaultsApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsApiManager.swift; sourceTree = "<group>"; };
+		374649B921F4C9DD002ABD1A /* ApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProtocol.swift; sourceTree = "<group>"; };
+		374649BB21F4CCEC002ABD1A /* ConvertCoworkingApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCoworkingApiManager.swift; sourceTree = "<group>"; };
+		374649BD21F4D0BA002ABD1A /* CacheProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheProtocol.swift; sourceTree = "<group>"; };
+		374649BF21F4D150002ABD1A /* ConvertCoworkingCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCoworkingCacheManager.swift; sourceTree = "<group>"; };
 		37A1EF0821EEC65000E517EB /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		37A1EF0B21EEC65000E517EB /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		37A1EF1221EECC5300E517EB /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
-		37A1EF1421EED8F400E517EB /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		37A1EF1421EED8F400E517EB /* LoginApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiImpl.swift; sourceTree = "<group>"; };
 		37A1EF1821EEDD0F00E517EB /* RealmDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDao.swift; sourceTree = "<group>"; };
 		37A1EF1F21EEDF8E00E517EB /* AuthenticationRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepos.swift; sourceTree = "<group>"; };
 		37A1EF2121EEDFC500E517EB /* AuthenticationReposImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationReposImpl.swift; sourceTree = "<group>"; };
@@ -199,9 +207,7 @@
 		370AB1FF21ED97CC00435356 /* MVVM_Structure */ = {
 			isa = PBXGroup;
 			children = (
-				370AB23221ED980200435356 /* viewmodel */,
-				370AB23121ED97FD00435356 /* view */,
-				370AB23021ED97F300435356 /* model */,
+				374649C221F4D63C002ABD1A /* presentation */,
 				370AB22F21ED97EB00435356 /* data */,
 				370AB22E21ED97DF00435356 /* common */,
 				370AB20421ED97CC00435356 /* Main.storyboard */,
@@ -245,10 +251,9 @@
 		370AB22F21ED97EB00435356 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				370AB23F21ED9F2D00435356 /* ReposImpl */,
-				37A1EF1D21EEDEF100E517EB /* ConvertDataToModel */,
-				370AB23E21ED9EE400435356 /* Cache */,
+				374649C121F4D601002ABD1A /* repos */,
 				370AB23D21ED9EDE00435356 /* Remote */,
+				370AB23E21ED9EE400435356 /* Cache */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -315,13 +320,13 @@
 			path = Cache;
 			sourceTree = "<group>";
 		};
-		370AB23F21ED9F2D00435356 /* ReposImpl */ = {
+		370AB23F21ED9F2D00435356 /* reposImpl */ = {
 			isa = PBXGroup;
 			children = (
 				37A1EF2121EEDFC500E517EB /* AuthenticationReposImpl.swift */,
 				372A2AD721F18AF5006205F7 /* CoworkingSpaceReposImpl.swift */,
 			);
-			path = ReposImpl;
+			path = reposImpl;
 			sourceTree = "<group>";
 		};
 		370AB24021EDE8BD00435356 /* ReposProtocol */ = {
@@ -354,7 +359,7 @@
 		372A2AD221F18856006205F7 /* coworking-space */ = {
 			isa = PBXGroup;
 			children = (
-				372A2AD321F1886D006205F7 /* ListCoworkingSpaceAPI.swift */,
+				372A2AD321F1886D006205F7 /* ListCoworkingSpaceApiImpl.swift */,
 			);
 			path = "coworking-space";
 			sourceTree = "<group>";
@@ -365,6 +370,35 @@
 				372A2AE621F1BF9E006205F7 /* CoworkingRealmEntity.swift */,
 			);
 			path = "coworking-space";
+			sourceTree = "<group>";
+		};
+		374649B821F4C9B4002ABD1A /* dataProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				374649B921F4C9DD002ABD1A /* ApiProtocol.swift */,
+				374649BD21F4D0BA002ABD1A /* CacheProtocol.swift */,
+			);
+			path = dataProtocol;
+			sourceTree = "<group>";
+		};
+		374649C121F4D601002ABD1A /* repos */ = {
+			isa = PBXGroup;
+			children = (
+				37A1EF1D21EEDEF100E517EB /* ConvertDataToModel */,
+				370AB23F21ED9F2D00435356 /* reposImpl */,
+				374649B821F4C9B4002ABD1A /* dataProtocol */,
+			);
+			path = repos;
+			sourceTree = "<group>";
+		};
+		374649C221F4D63C002ABD1A /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				370AB23021ED97F300435356 /* model */,
+				370AB23121ED97FD00435356 /* view */,
+				370AB23221ED980200435356 /* viewmodel */,
+			);
+			path = presentation;
 			sourceTree = "<group>";
 		};
 		37A1EF0321EEC5D000E517EB /* BaseApi */ = {
@@ -382,6 +416,7 @@
 			children = (
 				372A2ACB21F17D76006205F7 /* coworking-space */,
 				37A1EF1C21EEDE2D00E517EB /* authentication */,
+				374649BB21F4CCEC002ABD1A /* ConvertCoworkingApiManager.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -399,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				372A2AE321F1BF5A006205F7 /* coworking-space */,
+				374649BF21F4D150002ABD1A /* ConvertCoworkingCacheManager.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -422,7 +458,7 @@
 		37A1EF1B21EEDE1700E517EB /* authentication */ = {
 			isa = PBXGroup;
 			children = (
-				37A1EF1421EED8F400E517EB /* LoginAPI.swift */,
+				37A1EF1421EED8F400E517EB /* LoginApiImpl.swift */,
 			);
 			path = authentication;
 			sourceTree = "<group>";
@@ -786,7 +822,8 @@
 				37A1EF0E21EEC65000E517EB /* APIService.swift in Sources */,
 				370AB20321ED97CC00435356 /* LoginVC.swift in Sources */,
 				370AB20121ED97CC00435356 /* AppDelegate.swift in Sources */,
-				37A1EF1521EED8F400E517EB /* LoginAPI.swift in Sources */,
+				37A1EF1521EED8F400E517EB /* LoginApiImpl.swift in Sources */,
+				374649BC21F4CCEC002ABD1A /* ConvertCoworkingApiManager.swift in Sources */,
 				372F6BD721F16CBE00507783 /* UserDefaultsApiManager.swift in Sources */,
 				37A1EF3121EEE66100E517EB /* AppInitializeManager.swift in Sources */,
 				37A1EF2E21EEE5C100E517EB /* AutoSizeTextView.swift in Sources */,
@@ -799,11 +836,14 @@
 				372A2ADC21F18C5D006205F7 /* CoworkingModel.swift in Sources */,
 				372A2ADA21F18BF7006205F7 /* OrganizationModel.swift in Sources */,
 				37A1EF2D21EEE5C100E517EB /* AutoSizeConstraint.swift in Sources */,
+				374649BA21F4C9DD002ABD1A /* ApiProtocol.swift in Sources */,
 				370AB23821ED9DA900435356 /* SwinjectStoryboard.swift in Sources */,
 				37A1EF2F21EEE5C100E517EB /* AutoSizeButton.swift in Sources */,
 				372A2ADE21F18CF0006205F7 /* ConvertCoworkingManager.swift in Sources */,
 				37A1EF1921EEDD0F00E517EB /* RealmDao.swift in Sources */,
-				372A2AD421F1886D006205F7 /* ListCoworkingSpaceAPI.swift in Sources */,
+				374649C021F4D150002ABD1A /* ConvertCoworkingCacheManager.swift in Sources */,
+				372A2AD421F1886D006205F7 /* ListCoworkingSpaceApiImpl.swift in Sources */,
+				374649BE21F4D0BA002ABD1A /* CacheProtocol.swift in Sources */,
 				372A2AE921F1C920006205F7 /* CoworkingSpaceDao.swift in Sources */,
 				372A2AD621F18A8C006205F7 /* CoworkingSpaceRepos.swift in Sources */,
 				37A1EF1321EECC5300E517EB /* LoginEntity.swift in Sources */,

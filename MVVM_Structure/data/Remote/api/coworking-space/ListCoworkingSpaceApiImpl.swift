@@ -9,15 +9,26 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import RxSwift
 
-class ListCoworkingSpaceAPI: APIService<[CoworkingApiEntity?]> {
+class ListCoworkingSpaceApiImpl: APIService<[CoworkingApiEntity?]>, ListCoworkingSpaceApi {
+   
     var limit:Int = 0
     var offset:Int = 0
     
-    init(limit:Int,offset:Int) {
+    func requestApi() -> Observable<[CoworkingModel]> {
+        return request().map { data in
+            return data.map{ entity in
+                return ConvertCoworkingApiManager.shared.convertApiDataToModel(apiData: entity) ?? CoworkingModel()
+            }
+        }
+    }
+    
+    func setParamater(limit: Int, offset: Int) {
         self.limit = limit
         self.offset = offset
     }
+   
     
     override func convertJson(_ val: JSON?) throws -> [CoworkingApiEntity?] {
         guard let value = val  else { return  [] }

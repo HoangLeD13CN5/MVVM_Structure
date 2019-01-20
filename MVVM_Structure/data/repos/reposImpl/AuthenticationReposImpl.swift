@@ -10,15 +10,17 @@ import Foundation
 import RxSwift
 
 class AuthenticationReposImpl: AuthenticationRepos{
+    var loginApi:LoginApi
+    
+    init(loginApi:LoginApi) {
+        self.loginApi = loginApi
+    }
     
     func login(username: String, password: String) -> Observable<String> {
-        return LoginAPI(username: username,password: password)
-            .request()
-            .observeOn(MainScheduler.instance)
-            .flatMap { data in
-                return self.setLocalOAuthToken(oauthToken: (data?.token))
-            }
-        
+        self.loginApi.setParamater(username: username, password: password)
+        return self.loginApi
+                   .requestApi()
+                   .observeOn(MainScheduler.instance)
     }
     
     func logout() -> Observable<Bool>{
@@ -30,12 +32,4 @@ class AuthenticationReposImpl: AuthenticationRepos{
         }
     }
     
-    private func setLocalOAuthToken(oauthToken: String?) -> Observable<String> {
-        return Observable<String>.create { observer in
-            UserDefaultsApiManager.shared.saveToken(token: oauthToken ?? "")
-            observer.onNext(oauthToken ?? "")
-            observer.onCompleted()
-            return Disposables.create {}
-        }
-    }
 }
