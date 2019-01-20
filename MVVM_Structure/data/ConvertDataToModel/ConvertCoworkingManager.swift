@@ -37,4 +37,41 @@ class ConvertCoworkingManager {
         model.organization = self.convertApiDataToModel(apiData: apiData?.organization)
         return model
     }
+    
+    func convertApiDataToRealm(apiData: CoworkingApiEntity?) -> CoworkingRealmEntity {
+        let realmEntity = CoworkingRealmEntity()
+        realmEntity.id =  apiData?.id ?? 0
+        realmEntity.title = apiData?.title
+        realmEntity.descriptionWorking = apiData?.description
+        realmEntity.address = apiData?.address
+        realmEntity.contact = apiData?.contact
+        realmEntity.location = apiData?.location
+        realmEntity.publish_status = apiData?.publish_status ?? false
+        realmEntity.thumbnail = apiData?.thumbnail
+        realmEntity.idOrganization = apiData?.organization?.id ?? 0
+        realmEntity.nameOrganization = apiData?.organization?.name
+        realmEntity.phoneNumberOrganization = apiData?.organization?.phoneNumber
+        realmEntity.addressOrganization = apiData?.organization?.address
+        return realmEntity
+    }
+    
+    func convertRealmToModel(realmData: CoworkingRealmEntity?) -> CoworkingModel?{
+        let model = CoworkingModel()
+        model.id =  realmData?.id
+        model.title = realmData?.title
+        model.description = realmData?.description
+        model.address = realmData?.address
+        model.contact = realmData?.contact
+        model.location = realmData?.location
+        model.publish_status = realmData?.publish_status
+        model.thumbnail = realmData?.thumbnail
+        let organiModel = OrganizationModel()
+        organiModel.id =  realmData?.idOrganization
+        organiModel.name = realmData?.nameOrganization
+        organiModel.phoneNumber = realmData?.phoneNumberOrganization
+        organiModel.address = realmData?.addressOrganization
+        model.organization = organiModel
+        return model
+    }
+    
 }

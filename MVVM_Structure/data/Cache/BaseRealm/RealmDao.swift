@@ -19,15 +19,13 @@ protocol StandaloneCopy {
 class RealmDao<T: Object> {
     
     class func realmInit() {
-        if let fileURL = Realm.Configuration.defaultConfiguration.fileURL {
-            try? FileManager.default.removeItem(at: fileURL)
-        }
         let config = Realm.Configuration(schemaVersion: 1, migrationBlock: { _, oldSchemaVersion in
             if (oldSchemaVersion == 1) {
                 
             }
         })
         Realm.Configuration.defaultConfiguration = config
+        print("fileURLRealm: \(Realm.Configuration.defaultConfiguration.fileURL?.path ?? "")")
     }
     
     func find(_ type: T.Type) throws -> T? {

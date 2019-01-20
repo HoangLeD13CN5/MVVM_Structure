@@ -23,20 +23,20 @@ class ListCoworkingViewModelTests: XCTestCase {
     }
     
     func test_whenInitialized_storesInitParams() {
-        let viewModel = ListCoworkingViewModel(coworkingRepos: CoworkingSpaceReposImpl())
+        let viewModel = ListCoworkingViewModel(coworkingRepos: CoworkingSpaceReposImpl(dao: CoworkingSpaceDao()))
         XCTAssertNotNil(viewModel.coworkingRepos)
     }
     
     func testGetListDataSuccess() {
        let asyncExpect = expectation(description: "fulfill test")
-       let viewModel = ListCoworkingViewModel(coworkingRepos: CoworkingSpaceReposImpl())
+       let viewModel = ListCoworkingViewModel(coworkingRepos: CoworkingSpaceReposImpl(dao: CoworkingSpaceDao()))
         viewModel.loadDataAction
             .execute("Test")
             .subscribe(onNext: { _ in
                 asyncExpect.fulfill()
             })
             .disposed(by: bag)
-        waitForExpectations(timeout: 2.0, handler: nil )
+        waitForExpectations(timeout: 3.0, handler: nil )
         XCTAssertNotEqual(viewModel.listCoworking.value.count, 0)
     }
     

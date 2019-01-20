@@ -14,7 +14,7 @@ extension SwinjectStoryboard
     @objc class func setup (){
         defaultContainer.register(AuthenticationRepos.self, factory: { _ in return AuthenticationReposImpl() })
         
-        defaultContainer.register(CoworkingSpaceRepos.self, factory: { _ in return CoworkingSpaceReposImpl() })
+        defaultContainer.register(CoworkingSpaceRepos.self, factory: { _ in return CoworkingSpaceReposImpl(dao: CoworkingSpaceDao()) })
         
         defaultContainer.storyboardInitCompleted(LoginVC.self) { r, c in
             c.loginViewModel = LoginViewModel(authRepos: r.resolve(AuthenticationRepos.self)!)
