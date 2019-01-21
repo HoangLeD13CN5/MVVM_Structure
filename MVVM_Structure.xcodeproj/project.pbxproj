@@ -249,7 +249,7 @@
 		370AB22F21ED97EB00435356 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				374649C121F4D601002ABD1A /* repos */,
+				370AB23F21ED9F2D00435356 /* reposImpl */,
 				370AB23D21ED9EDE00435356 /* Remote */,
 				370AB23E21ED9EE400435356 /* Cache */,
 			);
@@ -321,8 +321,9 @@
 		370AB23F21ED9F2D00435356 /* reposImpl */ = {
 			isa = PBXGroup;
 			children = (
-				37A1EF2121EEDFC500E517EB /* AuthenticationReposImpl.swift */,
 				372A2AD721F18AF5006205F7 /* CoworkingSpaceReposImpl.swift */,
+				37A1EF2121EEDFC500E517EB /* AuthenticationReposImpl.swift */,
+				374649B821F4C9B4002ABD1A /* dataProtocol */,
 			);
 			path = reposImpl;
 			sourceTree = "<group>";
@@ -377,15 +378,6 @@
 				374649BD21F4D0BA002ABD1A /* CacheProtocol.swift */,
 			);
 			path = dataProtocol;
-			sourceTree = "<group>";
-		};
-		374649C121F4D601002ABD1A /* repos */ = {
-			isa = PBXGroup;
-			children = (
-				370AB23F21ED9F2D00435356 /* reposImpl */,
-				374649B821F4C9B4002ABD1A /* dataProtocol */,
-			);
-			path = repos;
 			sourceTree = "<group>";
 		};
 		374649C221F4D63C002ABD1A /* presentation */ = {
